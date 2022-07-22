@@ -44,3 +44,5 @@ function renderIndumentaria() {
 
 guardarIndumentariaLS(indumentaria);
 renderIndumentaria();
+
+

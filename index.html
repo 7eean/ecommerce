@@ -8,6 +8,8 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <script src="https://kit.fontawesome.com/28c987d36e.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="./media/pngegg (1).png" sizes="20x20">
     <!-- Link a mi css -->
     <link rel="stylesheet" href="./css/main.css">
     <!-- Link a bootstrap -->
@@ -20,7 +22,7 @@
 </head>
 <body>
     <div class="opener-nav">
-        <p class="animate__animated animate__fadeIn">Envios a todo el pais. Pagá con el método de pago que prefieras.</p>
+        <p id="p1" class="animate__animated animate__fadeIn"></p>
     </div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
@@ -42,19 +44,19 @@
                 </ul>
               </li>
             </ul>
-            <a class="navbar-brand" style="margin-right: 450px;" href="index.html"> <img src="./media/pngegg (1).png" alt=""></a>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">
+                <img src="./media/pngegg (1).png" class="position-absolute top-50 start-50 translate-middle" class="d-inline-block align-text-top">
+              </a>
+            </div>
           </div>
         </div>
     </nav>
     <div class="container-header">
         <img class="bg-header" src="./media/chris-henry-tV8yaU09t7w-unsplash.jpg" alt="#">
         <header>
-            <h2 class="h2-header">WE ARE <span>BEAST.</span></h2>
-            <h4 class="h4-header">Como amantes de la cultura proveemos la sabiduría para traerles los mejores  <span>productos 100% originales.</span></h4>
+            <h2 id="h2header" class="h2-header"></h2>
+            <h4 id="h4idx" class="h4-header"></h4>
         </header>
     </div>
   <div class="container-main">
@@ -71,19 +73,18 @@
         </div>
       </section>
       <section style="margin-top: 100px;">
-        <h2 class="h2-carousel">TUS MARCAS FAVORITAS EN <span>BEAST.</span></h2>
+        <h2 id="h2Carousel" class="h2-carousel"></h2>
         <div class="container-section2">
           <img class="img-section2" src="./media/nelson-ndongala-kKObh7tUPNc-unsplash.jpg"alt="#">
-          <h4 class="h4-section2">Encontra y disfruta tus marcas favoritas y mucho mas en <span>BEAST.</span></h4>
-          <a href="./pages/tienda.html" class="myButton">SHOP NOW</a>
+          <h4 id="h4Section2" class="h4-section2"></h4>
+          <a href="./pages/indumentaria.html" class="myButton">SHOP NOW</a>
         </div>
       </section>
       <section>
         <div class="before-footer-div">
-          <h4>VISITA NUESTRO SHOWROOM</h4>
-          <p>Oficina 201, Buenos Aires, Argentina.</p>
-          <p>011 998-899</p>
-          <p>beastinexistent@gmail.com</p>
+          <h4 id="h4s2"></h4>
+          <p id="ps2"></p>
+          <p id="ps3"></p>
         </div>
       </section>
     </main>
@@ -91,34 +92,35 @@
   <div class="container-footer">
     <footer class="footer">
       <div class="div-contacto">
-        <h4 class="">Contacto</h4>
-        <p>Oficina 201, Buenos Aires, Argentina</p>
-        <p>011 998-899</p>
-        <p>beastinexistent@gmail.com</p>
-        <p>Coming soon Mexico, Panama.</p>
-        <a href="">Nosotros</a>
+        <h4 id="h4f" class="">Contacto</h4>
+        <p id="pf1"></p>
+        <p id="pf2"></p>
+        <p id="pf3"></p>
+        <p id="pf4"></p>
+        <a id="af" href="">Nosotros</a>
       </div>
       <div class="div-beast">
-        <h4 class="">¿Por qué <span>Beast?</span></h4>
-        <p>Variedad de productos exclusivos</p>
-        <p>Envios a todo el pais</p>
-        <p>Sitio seguro</p>
-        <p>Garantia de calidad</p>
+        <h4 id="h4f2" class="">¿Por qué <span>Beast?</span></h4>
+        <p id="pf5"></p>
+        <p id="pf6"></p>
+        <p id="pf7"></p>
+        <p id="pf8"></p>
       </div>
       <div class="div-redes">
-        <h4 class="">Redes</h4>
-        <p>-Instragram-</p>
-        <p>-Twitter-</p>
-        <p>-Facebook-</p>
+        <h4 id="h4f3" class="">Redes</h4>
+        <p id="pf9"></p>
+        <p id="pf10"></p>
+        <p id="pf11"></p>
       </div>
       <div class="button-shop">
-        <a href="./pages/tienda.html">Shop Now</a>
+        <a id="af2" href="./pages/indumentaria.html">Shop Now</a>
       </div>
       <div class="dand">
-        <p>Designed and developed by Lean - 2022</p>
+        <p id="pf12"></p>
       </div>
     </footer>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  <script src="./js/app.js"></script>
 </body>
 </html>
