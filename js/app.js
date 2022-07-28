@@ -1,7 +1,5 @@
 let p1 = document.getElementById("p1");
 p1.innerHTML = "Envios a todo el pais. Pagá con el método de pago que prefieras.";
-let h2header = document.getElementById("h2header");
-h2header.innerHTML = `WE ARE <span>BEAST.</span>`;
 let h4idx = document.getElementById("h4idx");
 h4idx.innerHTML = `Como amantes de la cultura proveemos la sabiduría para traerles los mejores  <span>productos 100% originales.</span>`;
 let h2Carousel = document.getElementById("h2Carousel");
@@ -38,5 +36,4 @@ let pf11 = document.getElementById("pf11");
 pf11.innerHTML = "-Facebook";
 let pf12 = document.getElementById("pf12");
 pf12.innerHTML = "Designed and developed by Lean - 2022";
-let spanbeast = document.getElementById("spanbeast");
-spanbeast.innerHTML = `<span>Shop now. Enjoy always.</span>`;
+
