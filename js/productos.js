@@ -13,14 +13,6 @@ const productos = [
     {id:12, nombre:"Converse Chuck Taylor All Star", descripcion:"SIZE 9.5 / DS", imagen:"Converse-Chuck-Taylor-All-Star.png", precio:54.801},
 ];
 
-function obtenerProductosLS() {
-    return JSON.parse(localStorage.getItem("productos")) || [];
-};
-
-function guardarProductosLS(productos) {
-    localStorage.setItem("productos", JSON.stringify(productos));
-};
-
 function renderProductos() {
     let productos = obtenerProductosLS();
     let contenido = "";

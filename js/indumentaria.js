@@ -13,14 +13,6 @@ const indumentaria = [
     {id:12, nombre:"Fear of God Essential Sweatshort", descripcion:"SIZE M / L / S / XS DS", imagen:"Fear-of-God-Essentials-Sweatshort.png", precio:68.453},
 ];
 
-function obtenerIndumentariaLS() {
-    return JSON.parse(localStorage.getItem("indumentaria")) || [];
-};
-
-function guardarIndumentariaLS(indumentaria) {
-    localStorage.setItem("indumentaria", JSON.stringify(indumentaria));
-};
-
 function renderIndumentaria() {
     let indumentarias = obtenerIndumentariaLS();
     let contenido2 = "";

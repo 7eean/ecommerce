@@ -1,4 +1,4 @@
-.bg-header{
+.bg-header2{
     width: 100%;
     height: 120vh;
     background-repeat: none;
@@ -28,8 +28,6 @@
     text-align: center;
     font-family: 'Roboto', sans-serif;
     color: black;
-    padding-left: 13em;
-    padding-right: 13em;
 }
 
 .h4-header span{
@@ -54,31 +52,21 @@
     margin-top: 70px;
 }
 
-.img1{
-    grid-area: img1;
-    padding-left: 150px;
-}
-
-.img2{
-    grid-area: img2;
-}
-
-.img3{
-    grid-area: img3;
-    padding-right: 80px;
-}
-
-.imgmain{
-    width: 95%;
+.img-section2{
+    grid-area: img;
+    width: 100%;
 }
 
 .h2-carousel{
     text-align: center;
     font-family: 'Open Sans', sans-serif;
-    font-size: 2em;
+    font-size: 1.4em;
     padding-bottom: 50px;
 }
-
+.imgmain{
+    width: 90%;
+    margin-left: 0.5em;
+}
 .h2-carousel span{
     color: red;
 }
@@ -90,14 +78,13 @@
 	cursor:pointer;
 	color:#ffffff;
 	font-family:'Roboto', sans-serif;
-	font-size:19px;
-	padding-top: 10px;
-    padding-left: 25px;
+	font-size:15px;
+	padding: 1em;
 	text-decoration:none;
-    grid-area: button;
+    grid-area: none;
     width: 160px;
     height: 55px;
-    margin-left: 4.5em;
+    margin-left: 10em;
 }
 .myButton:hover {
 	background-color:red;
@@ -108,25 +95,12 @@
 	top:1px;
 }
 
-.container-section2{
-    display: grid;
-    grid-template-areas: 
-    "img h4"
-    "img button";
-    margin-bottom: 50px;
-}
-
-.img-section2{
-    width: 90vh;
-    grid-area: img;
-    margin-left: 140px;
-}
-
 .h4-section2{
     grid-area: h4;
-    padding-top: 170px;
-    padding-left: 3.5em;
-    padding-right: 3.5em;
+    padding-top: 30px;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+    padding-bottom: 1em;
 }
 
 .h4-section2 span{
@@ -136,6 +110,7 @@
 .before-footer-div{
     text-align: center;
     margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 .before-footer-div p {
@@ -144,29 +119,31 @@
 }
 
 .before-footer-div h4 {
-    font-size: 2em;
+    font-size: 1.5em;
     margin-bottom: 30px;
 }
 
 .container-footer footer{
     background-color: black;
     width: 100%;
-    height: 40vh;
+    height: 100%;
 }
 
 .footer{
     display: grid;
     grid-template-areas: 
-    "contacto beast redes shop"
-    "contacto beast redes shop"
-    "mio mio mio mio";
+    "contacto"
+    "beast"
+    "redes"
+    "shop"
+    "mio";
 }
 
 .div-contacto{
     grid-area: contacto;
     color: whitesmoke;
     padding-top: 20px;
-    margin-left: 100px;
+    margin-left: 60px;
 }
 
 .div-contacto a{
@@ -177,7 +154,8 @@
 .div-beast{
     grid-area: beast;
     color: whitesmoke;
-    padding-top: 20px;
+    padding-top: 30px;
+    margin-left: 60px;
 }
 
 .div-beast span{
@@ -187,13 +165,15 @@
 .div-redes{
     grid-area: redes;
     color: whitesmoke;
-    padding-top: 20px;
+    padding-top: 30px;
+    margin-left: 60px;
+    display: grid;
 }
 
 .button-shop{
     grid-area: shop;
     color: whitesmoke;
-    padding-top: 80px;
+    margin-left: 250px;
 }
 
 .button-shop a {
@@ -207,4 +187,130 @@
     grid-area: mio;
     text-align: center;
     color: #615d61;
+}
+
+@media screen and (min-width: 720px) {
+    .img1{
+        grid-area: img1;
+        padding-left: 150px;
+    }
+    
+    .img2{
+        grid-area: img2;
+    }
+    
+    .img3{
+        grid-area: img3;
+        padding-right: 80px;
+    } 
+    .container-section2{
+        display: grid;
+        grid-template-areas: 
+        "img h4"
+        "img button";
+        margin-bottom: 50px;
+    }
+
+    .img-section2{
+        width: 90vh;
+        grid-area: img;
+        margin-left: 140px;
+    }
+
+    .myButton {
+        box-shadow:inset 1px 50px 22px -48px #615d61;
+        background-color:#000000;
+        border:2px solid #0f0a0f;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:'Roboto', sans-serif;
+        font-size:19px;
+        padding-top: 10px;
+        padding-left: 25px;
+        text-decoration:none;
+        grid-area: button;
+        width: 160px;
+        height: 55px;
+        margin-left: 4.5em;
+    }
+    .myButton:hover {
+        background-color:red;
+        color: white;
+    }
+    .myButton:active {
+        position:relative;
+        top:1px;
+    }
+    
+    .h4-section2{
+        grid-area: h4;
+        padding-top: 170px;
+        padding-left: 3.5em;
+        padding-right: 3.5em;
+    }
+    
+    .h4-section2 span{
+        color: red;
+    }
+    
+    .footer{
+        display: grid;
+        grid-template-areas: 
+        "contacto beast redes shop"
+        "contacto beast redes shop"
+        "mio mio mio mio";
+    }
+    
+    .div-contacto{
+        grid-area: contacto;
+        color: whitesmoke;
+        padding-top: 20px;
+        margin-left: 100px;
+    }
+    
+    .div-contacto a{
+        text-decoration: none;
+        color: red;
+    }
+    
+    .div-beast{
+        grid-area: beast;
+        color: whitesmoke;
+        padding-top: 20px;
+    }
+    
+    .div-beast span{
+        color: red;
+    }
+    
+    .div-redes{
+        grid-area: redes;
+        color: whitesmoke;
+        padding-top: 20px;
+    }
+    
+    .button-shop{
+        grid-area: shop;
+        color: whitesmoke;
+        padding-top: 80px;
+    }
+    
+    .button-shop a {
+        text-decoration: none;
+        color: rgb(255, 0, 0);
+        font-family:'Roboto', sans-serif;
+        font-size: 1.5em; 
+    }
+    
+    .dand{
+        grid-area: mio;
+        text-align: center;
+        color: #615d61;
+    }
+
+    .container-footer footer{
+        background-color: black;
+        width: 100%;
+        height: 40vh;
+    }
 }
