@@ -14,6 +14,8 @@ function actualizarBotonCarrito() {
     document.getElementById("boton_carrito").innerHTML = contenido;
 }
 
+function obtenerProductosCarrito() {
+    return JSON.parse(localStorage.getItem("carrito")) || [];
+};
 
 actualizarBotonCarrito();
-renderProductos();

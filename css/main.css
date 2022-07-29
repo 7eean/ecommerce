@@ -189,6 +189,7 @@
     color: #615d61;
 }
 
+
 @media screen and (min-width: 720px) {
     .img1{
         grid-area: img1;

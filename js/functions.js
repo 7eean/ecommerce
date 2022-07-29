@@ -36,3 +36,5 @@ function agregarCarrito(id){
     guardarProductosCarrito(productos_carrito);
     actualizarBotonCarrito();
 }
+
+
