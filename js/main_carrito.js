@@ -5,49 +5,50 @@ function renderProductosCarrito(){
 
     if (productos.length > 0 ){
         contenido = `
-        <table class="table table-borderless">
+        <table class="table table-borderless tc1">
         <tr>
-            <th scope="col"></th>
-            <th scope="col" >Producto</th>
-            <th scope="col">Precio</th>
-            <th id="f2" scope="col">Cantidad</th>
+            <th class="tr1" scope="col"></th>
+            <th class="tr1" scope="col" >Producto</th>
+            <th class="tr1" scope="col">Precio</th>
+            <th class="tr1" id="f2" scope="col">Cantidad</th>
         </tr>`;
         let total = 0;
 
         for (let producto of productos){
             let precio = producto.precio * producto.cantidad;
             contenido += `
-            <tr>
-            <td class="text-end"><img src="../media/${producto.imagen}" width="102"></img></td>
-            <td>${producto.nombre}</td>
-            <td>$${precio}</td>
-            <td class="text-success"><a title="Agregar producto" href="#" class="botonmas" onclick="agregarCarrito(${producto.id})" >+</a> ${producto.cantidad} <a title="Eliminar producto" href="#" class="botonmenos" onclick="eliminarCarrito(${producto.id})">-</a></td>
-            <td><a href=# class="btn btn-light" onclick="eliminarCarrito(${producto.id})"><img src="../media/trash.png" style="width:25px"></a></td>
+            <tr class="tr2">
+            <td class="text-end tdimg"><img src="../media/${producto.imagen}" width="102"></img></td>
+            <td class="tdprod">${producto.nombre}</td>
+            <td class="tdprice">$${precio}</td>
+            <td class="text-success tdmas"><a title="Agregar producto" href="#" class="botonmas amas" onclick="agregarCarrito(${producto.id})">+</a> ${producto.cantidad} <a title="Eliminar producto" href="#" class="botonmenos amenos" onclick="eliminarCarrito(${producto.id})">-</a></td>
+            <td class="tdvaciar"><a href=# class="btn btn-light" onclick="eliminarCarrito(${producto.id})"><img src="../media/trash.png" style="width:25px"></a></td>
             </tr>`;
             total += precio;
         }
 
-        contenido += `</table>
-        <p class="text-end" style="margin-right: 85px; margin-bottom:100px;"><a style="text-decoration: none;" href="#" class="bt btn-light text-black" onclick="vaciarCarrito()" title="Vaciar">Vaciar carrito<img src="../media/trash.png" style="width:25px; margin-left: 10px;"></a></p>
-        <div class="final-compra">  
-        <table class="table">
-        <thead>
-        <tr><th scope="col">Finalizar compra</th></tr>
-        </thead>
-        <tr>
-            <td><b>Subtotal</b></td>
-            <td>$ ${total}</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><b>Envio</b></td>
-            <td>Gratis</td>
-            <td>Retiro en tienda</td>
-        </tr>
-        </table>
-        <div>
-            <a href=# class="btn btn-dark">Finalizar compra</a>
+        contenido += `</table> 
+        <div class="containertotal"><a style="margin-top:40px;" href="#" class="btn btn-light text-black" onclick="vaciarCarrito()" title="Vaciar">Vaciar carrito<img src="../media/trash.png" style="width:25px; margin-left: 10px;"></a></div>
+        <div class="containertotalcomprar"> 
+        <a id="compra" style="margin-top:40px; margin-bottom:70px;" href="indumentaria.html" class="btn btn-success text-white" title="Seguir comprando">Seguir comprando<img src="../media/shopping-cart-svgrepo-com.svg" style="width:25px; margin-left: 10px;"></a>
         </div>
+        <div class="containerfinal">
+            <h4 class="h4total">Total del carrito</h4>
+            <table class="table tablacarrito">
+                <tr>
+                    <td>Subtotal</td>
+                    <td>$ ${total} </td>
+                </tr>
+                <tr>
+                    <td>Envio (Gratuito)</td>
+                    <td><input type="radio"> Envio a domicilio / Retiro en sucursal</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>$ ${total} </td>
+                </tr>  
+            </table>
+            <a href="#" class="boton4">Finalizar compra</a>
         </div>`;
     }
     

@@ -274,10 +274,143 @@
 	position:relative;
 	top:1px;
 }
-
+.tc1{
+    display: block;
+}
+.tr1{
+    display: none;
+}
+.tr2{
+    display: grid;
+    grid-template-areas: 
+    "tdimg tdprod tdprod tdmas"
+    "tdimg tdprice tdvaciar tdmas";
+    padding-top: 5em;
+}
+.tdimg{
+    grid-area: tdimg;
+}
+.tdprod{
+    grid-area: tdprod;
+}
+.tdmas{
+    grid-area: tdmas;
+}
+.tdprice{
+    grid-area: tdprice;
+}
+.tdvaciar{
+    grid-area: tdvaciar;
+}
+.containertotal{
+    display: grid;
+}
+.totalcart{
+    margin-right: 8em;
+}
+.containertotalcomprar{
+    display: grid;
+    grid-template-columns: "1""2";
+}
+.boton4{
+    border-radius: 5px;
+    background-color: #23232c;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    border: 1px solid #23232c;
+    padding: 10px 100px;
+    margin-left: 10px;
+}
+.boton4:hover{
+    color: antiquewhite;
+}
+.h4total{
+    font-size: 1.5em;
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+    margin-left: 10px;
+}
+.tablacarrito{
+    font-family: 'Roboto', sans-serif;
+    margin-left: 10px;
+}
+.containerfinal{
+    margin-bottom: 200px;
+}
+.boton4 p {
+    text-align: center;
+}
+@media screen and (max-width: 431px){
+    .tdmas{
+        grid-area: tdmas;
+        display: grid;
+        grid-template-areas: "amas"
+        "num"
+        "amenos";
+    }
+    .amas{
+        grid-area: amas;
+    }
+    .amenos{
+        grid-area: amenos;
+    }
+    
+}
 
 
 @media screen and (min-width: 720px) {
+    .h4total{
+        font-size: 2em;
+        font-family: 'Roboto', sans-serif;
+        text-align: left;
+        margin-left: 30px;
+    }
+    .tablacarrito{
+        font-family: 'Roboto', sans-serif;
+        margin-left: none;
+        grid-area: tabla;
+        margin-right: 150px;
+    }
+    .containerfinal{
+        margin-bottom: 200px;
+        display: grid;
+        grid-template-areas: 
+        "total tabla tabla"
+        "total boton boton";
+    }
+    .boton4{
+        border-radius: 5px;
+        background-color: #23232c;
+        color: #ffffff;
+        font-family: 'Roboto', sans-serif;
+        text-decoration: none;
+        font-size: 20px;
+        border: 10px solid #23232c;
+        padding: 10px 200px 20px 505px;
+        margin-right: 10px;
+        grid-area: boton;
+    }
+    .boton4 p {
+        text-align: center;
+    }
+    .boton4:hover{
+        color: antiquewhite;
+    }
+    .totalcart{
+        margin-right: 45.5em;
+    }
+    .tr2{
+        display: table-row;
+    }
+    .tc1{
+        display: inline-table;
+    }
+    .tr1{
+        display: table-cell;
+    }
+    
     .buttoncarritoempty{
         border-radius: 0;
         line-height: 160px;
