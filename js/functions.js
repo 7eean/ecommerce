@@ -28,13 +28,43 @@ function searchProducto(id){
 }
 
 function agregarCarrito(id){
-    let producto = searchProducto(id);
+    
     let productos_carrito = obtenerProductosCarrito();
-    producto.cantidad = 1;
-    productos_carrito.push(producto);
-    console.log(producto)
+    let pos = productos_carrito.findIndex(x => x.id == id);
+
+    if (pos > -1) {
+        productos_carrito[pos].cantidad += 1; 
+    } else {
+        let producto = searchProducto(id);
+        producto.cantidad = 1;
+        productos_carrito.push(producto);
+        console.log(producto);
+    }
+    
+
     guardarProductosCarrito(productos_carrito);
     actualizarBotonCarrito();
+}
+
+function vaciarCarrito() {
+    localStorage.removeItem("carrito");
+    actualizarBotonCarrito();
+    renderProductosCarrito();
+}
+
+function eliminarCarrito(id){
+    let productos_carrito = obtenerProductosCarrito();
+    let producto = searchProducto(id);
+    let pos = productos_carrito.findIndex(x => x.id == id);
+    productos_carrito[pos].cantidad -= 1;
+    
+    if(productos_carrito[pos].cantidad == 0) {
+        productos_carrito.splice(pos, 1);
+    }
+    
+    guardarProductosCarrito(productos_carrito);
+    actualizarBotonCarrito();
+    renderProductosCarrito();
 }
 
 

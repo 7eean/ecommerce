@@ -16,7 +16,7 @@ const productos = [
     {id:15, nombre:"Camo C By Bathing Ape Tee Green", categoria:1 , descripcion:"SIZE M / S / XS / DS", imagen:"Bathing-Ape.png", precio:55.357},
     {id:16, nombre:"Fear of God Essentials Pullover Hoodie Applique ", categoria:1 , descripcion:"SIZE M / DS", imagen:"Essentials-Fear-of-God.png", precio:92.004},
     {id:17, nombre:"Anti Social Social Club Sugar Hill Hoodie Black", categoria:1 , descripcion:"SIZE XL / L / M / DS", imagen:"Anti-Social-Social-Club.png", precio:62.521},
-    {id:18, nombre:"Gucci x The North Face Print Jacket Beige/Ebony", categoria:1 , descripcion:"SIZE M / S / DS", imagen:"Gucci-x-The-North-Face.png", precio:4 + "," + 550.553},
+    {id:18, nombre:"Gucci x The North Face Print Jacket Beige/Ebony", categoria:1 , descripcion:"SIZE M / S / DS", imagen:"Gucci-x-The-North-Face.png", precio:4550.553},
     {id:19, nombre:"Nike Big Swoosh Tracket", descripcion:"SIZE M / S / DS", imagen:"Nike-Big-Swoosh.png", precio:29.035},
     {id:20, nombre:"Nike NSW Sport Swoosh Sweatpants", categoria:1 , descripcion:"SIZE M / S / DS", imagen:"Nike-NSW-Sport-Swoosh.png", precio:69.042},
     {id:21, nombre:"Nike Swoosh Obsidian Sweatpants", categoria:1 , descripcion:"SIZE M / L / DS", imagen:"Nike-Swoosh-Obsidian.png", precio:46.608},
