@@ -21,14 +21,14 @@ function renderProductosCarrito(){
             <td class="text-end tdimg"><img src="../media/${producto.imagen}" width="102"></img></td>
             <td class="tdprod">${producto.nombre}</td>
             <td class="tdprice">$${precio}</td>
-            <td class="text-success tdmas"><a title="Agregar producto" href="#" class="botonmas amas" onclick="agregarCarrito(${producto.id})">+</a> ${producto.cantidad} <a title="Eliminar producto" href="#" class="botonmenos amenos" onclick="eliminarCarrito(${producto.id})">-</a></td>
+            <td class="text-success tdmas"><a title="Agregar producto" href="#" class="botonmas amas" onclick="agregarCarrito(${producto.id});  alertaAgregoProducto();">+</a> ${producto.cantidad} <a title="Eliminar producto" href="#" class="botonmenos amenos" onclick="eliminarCarrito(${producto.id}); alertaEliminoProducto(); ">-</a></td>
             <td class="tdvaciar"><a href=# class="btn btn-light" onclick="eliminarCarrito(${producto.id})"><img src="../media/trash.png" style="width:25px"></a></td>
             </tr>`;
             total += precio;
         }
 
         contenido += `</table> 
-        <div class="containertotal"><a style="margin-top:40px;" href="#" class="btn btn-light text-black" onclick="vaciarCarrito()" title="Vaciar">Vaciar carrito<img src="../media/trash.png" style="width:25px; margin-left: 10px;"></a></div>
+        <div class="containertotal"><a style="margin-top:40px;" href="#" class="btn btn-light text-black" onclick="vaciarCarrito(); vaciarCarritoAlert();" title="Vaciar">Vaciar carrito<img src="../media/trash.png" style="width:25px; margin-left: 10px;"></a></div>
         <div class="containertotalcomprar"> 
         <a id="compra" style="margin-top:40px; margin-bottom:70px;" href="indumentaria.html" class="btn btn-success text-white" title="Seguir comprando">Seguir comprando<img src="../media/shopping-cart-svgrepo-com.svg" style="width:25px; margin-left: 10px;"></a>
         </div>
@@ -58,4 +58,33 @@ function renderProductosCarrito(){
 actualizarBotonCarrito()
 renderProductosCarrito();
 
+function alertaEliminoProducto() {
+    Toastify({
+        text: `Su producto se elimino con exito del carrito.`,
+        gravity: "top",
+        position: "right",
+        duration: 3000,
+        backgroundColor: "red",
+    }).showToast();
+}
+
+function alertaAgregoProducto() {
+    Toastify({
+        text: `Su producto se agrego con exito.`,
+        gravity: "top",
+        position: "right",
+        duration: 3000,
+        backgroundColor: "green",
+    }).showToast();
+}
+
+function vaciarCarritoAlert(){
+    Swal.fire({
+        position: 'top-mid',
+        icon: 'success',
+        title: 'Carrito vaciado con exito.',
+        showConfirmButton: false,
+        timer: 2000,
+      })
+}
 

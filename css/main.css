@@ -342,6 +342,9 @@
 .boton4 p {
     text-align: center;
 }
+#p1 span{
+    display: none;
+}
 @media screen and (max-width: 431px){
     .tdmas{
         grid-area: tdmas;
@@ -361,6 +364,9 @@
 
 
 @media screen and (min-width: 720px) {
+    #p1 span{
+        display: inline;
+    }
     .h4total{
         font-size: 2em;
         font-family: 'Roboto', sans-serif;

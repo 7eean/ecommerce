@@ -1,5 +1,5 @@
 let p1 = document.getElementById("p1");
-p1.innerHTML = "Envios a todo el pais. Pagá con el método de pago que prefieras.";
+p1.innerHTML = "Envios a todo el pais.<span> Pagá con el método de pago que prefieras.</span>";
 let h4idx = document.getElementById("h4idx");
 h4idx.innerHTML = `Como amantes de la cultura proveemos la sabiduría para traerles los mejores  <span>productos 100% originales.</span>`;
 let h2Carousel = document.getElementById("h2Carousel");
