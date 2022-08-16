@@ -11,7 +11,7 @@ function renderProductos() {
             <h5 class="card-title text-center">${producto.nombre}</h5>
             <p class="card-text text-center" style="color: #b3b2b1">${producto.descripcion}</p>
             <p class="card-text text-center">$${producto.precio}</p>
-            <p class="card-text text-center"><a href="#" class="btn btn-danger" <element onclick="agregarCarrito(${producto.id}); alertaAgregoIndumentaria();">Agregar al carrito</a></p> 
+            <p class="card-text text-center"><a href="#" class="btn btn-danger" <element onclick="agregarCarritoIndumentaria(${producto.id}); alertaAgregoIndumentaria();">Agregar al carrito</a></p> 
         </div>
         </div>
         </div>`

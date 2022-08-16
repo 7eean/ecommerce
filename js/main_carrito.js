@@ -48,7 +48,7 @@ function renderProductosCarrito(){
                     <td>$ ${total} </td>
                 </tr>  
             </table>
-            <a href="#" class="boton4">Finalizar compra</a>
+            <a href="finalizar.html" class="boton4" onclick="vaciarCarrito();">Finalizar compra</a>
         </div>`;
     }
     

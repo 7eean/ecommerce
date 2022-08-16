@@ -28,19 +28,15 @@ function searchProducto(id){
 }
 
 function agregarCarrito(id){
-    
-    let productos_carrito = obtenerProductosCarrito();
-    let pos = productos_carrito.findIndex(x => x.id == id);
+    let productos_carrito = agregarItem(id);
 
-    if (pos > -1) {
-        productos_carrito[pos].cantidad += 1; 
-    } else {
-        let producto = searchProducto(id);
-        producto.cantidad = 1;
-        productos_carrito.push(producto);
-        console.log(producto);
-    }
-    
+    guardarProductosCarrito(productos_carrito);
+    actualizarBotonCarrito();
+    renderProductosCarrito();
+}
+
+function agregarCarritoIndumentaria(id) {
+    let productos_carrito = agregarItem(id);
 
     guardarProductosCarrito(productos_carrito);
     actualizarBotonCarrito();
@@ -53,6 +49,30 @@ function vaciarCarrito() {
 }
 
 function eliminarCarrito(id){
+    let productos_carrito = eliminarItem(id);
+
+    guardarProductosCarrito(productos_carrito);
+    actualizarBotonCarrito();
+    renderProductosCarrito();
+}
+
+function agregarItem(id) {
+    let productos_carrito = obtenerProductosCarrito();
+    let pos = productos_carrito.findIndex(x => x.id == id);
+
+    if (pos > -1) {
+        productos_carrito[pos].cantidad += 1; 
+    } else {
+        let producto = searchProducto(id);
+        producto.cantidad = 1;
+        productos_carrito.push(producto);
+        console.log(producto);
+    }
+
+    return productos_carrito;
+}
+
+function eliminarItem(id) {
     let productos_carrito = obtenerProductosCarrito();
     let producto = searchProducto(id);
     let pos = productos_carrito.findIndex(x => x.id == id);
@@ -60,11 +80,9 @@ function eliminarCarrito(id){
     
     if(productos_carrito[pos].cantidad == 0) {
         productos_carrito.splice(pos, 1);
-    }
-    
-    guardarProductosCarrito(productos_carrito);
-    actualizarBotonCarrito();
-    renderProductosCarrito();
+    }  
+
+    return productos_carrito;
 }
 
 

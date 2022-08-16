@@ -345,6 +345,138 @@
 #p1 span{
     display: none;
 }
+.group {
+    position: relative;
+   }
+   
+.input {
+    font-size: 16px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 200px;
+    border: none;
+    border-bottom: 1px solid #515151;
+    background: transparent;
+   }
+   
+.input:focus {
+    outline: none;
+   }
+   
+label {
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+   }
+   
+.input:focus ~ label, .input:valid ~ label {
+    top: -20px;
+    font-size: 14px;
+    color: #5264AE;
+   }
+   
+.bar {
+    position: relative;
+    display: block;
+    width: 200px;
+   }
+   
+.bar:before, .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #5264AE;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+   }
+   
+.bar:before {
+    left: 50%;
+   }
+   
+.bar:after {
+    right: 50%;
+   }
+   
+.input:focus ~ .bar:before, .input:focus ~ .bar:after {
+    width: 50%;
+}
+   
+.highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+   
+.input:focus ~ .highlight {
+    animation: inputHighlighter 0.3s ease;
+}
+
+.imgfinal{
+    display: none;
+}
+   
+@keyframes inputHighlighter {
+    from {
+     background: #5264AE;
+    }
+   
+    to {
+     width: 0;
+     background: transparent;
+    }
+}
+/* From uiverse.io by @Voxybuns */
+.button04 {
+    /* Variables */
+   --button_radius: 0.75em;
+   --button_color: #e8e8e8;
+   --button_outline_color: #000000;
+   font-size: 17px;
+   font-weight: bold;
+   border: none;
+   border-radius: var(--button_radius);
+   background: var(--button_outline_color);
+   /* margin-left: 100px; */
+   margin-bottom: 100px;
+   margin-top: 60px;
+}
+  
+.button_top {
+   display: block;
+   box-sizing: border-box;
+   border: 2px solid var(--button_outline_color);
+   border-radius: var(--button_radius);
+   padding: 0.75em 1.5em;
+   background: var(--button_color);
+   color: var(--button_outline_color);
+   transform: translateY(-0.2em);
+   transition: transform 0.1s ease;
+   text-decoration: none;
+}
+  
+.button04:hover .button_top {
+   transform: translateY(-0.33em);
+   color: black;
+}
+  
+.button04:active .button_top {
+   transform: translateY(0);
+}
 @media screen and (max-width: 431px){
     .tdmas{
         grid-area: tdmas;
@@ -361,9 +493,12 @@
     }
     
 }
-
-
 @media screen and (min-width: 720px) {
+    .imgfinal{
+        display: block;
+        margin-left: 180px;
+        margin-top: 40px;
+    }
     #p1 span{
         display: inline;
     }
