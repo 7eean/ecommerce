@@ -124,7 +124,7 @@ function compraRealizada() {
           swalWithBootstrapButtons.fire(
             'Felicidades!',
             'Su compra llegara en 48hs habiles de forma gratuita.',
-            'success'
+            'success' 
           )
         } else if (
           /* Read more about handling dismissals below */
