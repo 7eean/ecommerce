@@ -12,28 +12,78 @@ let ps2 = document.getElementById("ps2");
 ps2.innerHTML = `Oficina 201, Buenos Aires, Argentina.`;
 let ps3 = document.getElementById("ps3");
 ps3.innerHTML = `011 998-899`;
-let pf1 = document.getElementById("pf1");
-pf1.innerHTML = `Oficina 201, Buenos Aires, Argentina`;
-let pf2 = document.getElementById("pf2");
-pf2.innerHTML = `011 998-899`;
-let pf3 = document.getElementById("pf3");
-pf3.innerHTML = `beastinexistent@gmail.com`;
-let pf4 = document.getElementById("pf4");
-pf4.innerHTML = "Coming soon Mexico, Panama."
-let pf5 = document.getElementById("pf5");
-pf5.innerHTML = "Variedad de productos exclusivos";
-let pf6 = document.getElementById("pf6");
-pf6.innerHTML = "Envios a todo el pais";
-let pf7 = document.getElementById("pf7");
-pf7.innerHTML = "Sitio seguro";
-let pf8 = document.getElementById("pf8");
-pf8.innerHTML = "Garantia de calidad";
-let pf9 = document.getElementById("pf9");
-pf9.innerHTML = "-Instragram-";
-let pf10 = document.getElementById("pf10");
-pf10.innerHTML = "-Twitter-";
-let pf11 = document.getElementById("pf11");
-pf11.innerHTML = "-Facebook";
-let pf12 = document.getElementById("pf12");
-pf12.innerHTML = "Designed and developed by Lean - 2022";
 
+function renderNavIndex(){
+    let contenido = `<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">
+      <img src="./media/pngegg (1).png" class="position-absolute top-50 start-50 translate-middle d-inline-block align-text-top">
+    </a>
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" style="font-size: 17px; padding-left: 1em;" aria-current="page" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" style="font-size: 17px; padding-left: 1em;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Categorias
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="./pages/sneakers.html">Calzado</a></li>
+              <li><a class="dropdown-item" href="./pages/indumentaria.html">Indumentaria</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container" >
+      <a href="#" id="boton_carrito"></a>
+    </div>
+</nav>
+    
+    `;
+
+    document.getElementById("container-navindex").innerHTML = contenido;
+}
+
+renderNavIndex();
+
+function renderFooterIndex(){
+    let contenido = `<footer data-aos="fade-up" class="footer">
+    <div class="div-contacto">
+      <h4 id="h4f" class="">Contacto</h4>
+      <p id="pf1">Oficina 201, Buenos Aires, Argentina</p>
+      <p id="pf2">011 998-899</p>
+      <p id="pf3">beastinexistent@gmail.com</p>
+      <p id="pf4">Coming soon Mexico, Panama.</p>
+      <a id="af" href="">Nosotros</a>
+    </div>
+    <div class="div-beast">
+      <h4 id="h4f2" class="">¿Por qué <span>Beast?</span></h4>
+      <p id="pf5">Variedad de productos exclusivos</p>
+      <p id="pf6">Envios a todo el pais</p>
+      <p id="pf7">Sitio seguro</p>
+      <p id="pf8">Garantia de calidad</p>
+    </div>
+    <div class="div-redes">
+      <h4 id="h4f3" class="">Redes</h4>
+      <p id="pf9">-Instragram-</p>
+      <p id="pf10">-Twitter-</p>
+      <p id="pf11">-Facebook</p>
+    </div>
+    <div class="button-shop">
+      <a id="af2" href="./pages/indumentaria.html">Shop Now</a>
+    </div>
+    <div class="dand">
+      <p id="pf12">Designed and developed by Lean - 2022</p>
+    </div>
+  </footer>
+    `;
+
+    document.getElementById("container-footer").innerHTML = contenido;
+}
+
+renderFooterIndex();

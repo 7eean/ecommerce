@@ -36,4 +36,41 @@ function alertaAgregoIndumentaria() {
     }).showToast();
 }
 
+function renderFooter2(){
+    let contenido = `   <footer class="footer">
+    <div class="div-contacto">
+      <h4 class="">Contacto</h4>
+      <p>Oficina 201, Buenos Aires, Argentina</p>
+      <p>011 998-899</p>
+      <p>beastinexistent@gmail.com</p>
+      <p>Coming soon Mexico, Panama.</p>
+      <a href="">Nosotros</a>
+    </div>
+    <div class="div-beast">
+      <h4 class="">¿Por qué <span>Beast?</span></h4>
+      <p>Variedad de productos exclusivos</p>
+      <p>Envios a todo el pais</p>
+      <p>Sitio seguro</p>
+      <p>Garantia de calidad</p>
+    </div>
+    <div class="div-redes">
+      <h4 class="">Redes</h4>
+      <p>-Instragram-</p>
+      <p>-Twitter-</p>
+      <p>-Facebook-</p>
+    </div>
+    <div class="button-shop">
+      <a href="#">Shop Now</a>
+    </div>
+    <div class="dand">
+      <p>Designed and developed by Lean - 2022</p>
+    </div>
+  </footer>
+    `;
+
+    document.getElementById("container-footer2").innerHTML = contenido;
+}
+
+renderFooter2();
+
 
